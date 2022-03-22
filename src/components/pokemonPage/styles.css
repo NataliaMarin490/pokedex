@@ -1,0 +1,44 @@
+.pokemonPage-container {
+  display: grid;
+  grid-template-rows: 150px auto;
+  grid-template-columns: 150px auto 150px;
+  grid-template-areas:
+    ". header img2"
+    "img1 card img2 ";
+  justify-content: center;
+}
+
+.pokemonPage-container article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+  margin-top: 30px;
+}
+
+.pokemonPage-container h2 {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.pokemonPage-container input {
+  background-image: url("./assets/search-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 98%;
+
+  margin-top: 20px;
+  padding: 8px;
+  width: 250px;
+  border: 2px solid #c0c0c0;
+  border-radius: 5px;
+}
+
+.card-containerPokemonPage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  grid-area: card;
+}
