@@ -7,7 +7,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<HomePage />} />
+          <Route path="/pokedex" element={<HomePage />} />
           <Route path="/pokemon" element={<PokemonPage />} />
         </Routes>
       </BrowserRouter>
