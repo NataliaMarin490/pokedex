@@ -1,0 +1,127 @@
+.pokemonPage-container {
+  display: grid;
+  grid-template-rows: 150px auto;
+  grid-template-columns: 10% auto 10%;
+  grid-template-areas:
+    ". header img2"
+    "img1 card img2 ";
+  justify-content: center;
+}
+
+.pokemonPage-container article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+  margin-top: 30px;
+}
+
+.pokemonPage-container h2 {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.pokemonPage-container-input {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.pokemonPage-container input {
+  font-size: 16px;
+  width: 100%;
+  height: 25px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  background: #fff;
+  outline: 0;
+  align-self: center;
+  margin-top: 20px;
+  padding: 14px 16px 0 10px;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.pokemonPage-container label {
+  position: absolute;
+  font-size: 16px;
+  color: #959595;
+
+  transform: translate(0, 170%) scale(1);
+  transform-origin: top left;
+  transition: all 0.2s ease-out;
+}
+
+.pokemonPage-container-input:focus-within label {
+  transform: translate(-5px, 22px) scale(0.75);
+}
+.pokemonPage-container-input .input-active {
+  transform: translate(-5px, 22px) scale(0.75);
+}
+
+.pokemonPage-container i {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pokemonPage-Loader {
+  grid-area: card;
+  height: 50%;
+  align-self: center;
+  justify-self: center;
+  -webkit-animation: 3s rotate linear infinite;
+  animation: 3s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.card-containerPokemonPage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  grid-area: card;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
